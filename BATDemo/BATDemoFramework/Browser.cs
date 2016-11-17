@@ -1,20 +1,15 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.IE;
 
 namespace BATDemoFramework
 {
     public static class Browser
     {
         private static string baseUrl = "http://localhost:12142/";
-
-
-        //private static IWebDriver webDriver = new ChromeDriver();
-        private static IWebDriver webDriver = new InternetExplorerDriver(new InternetExplorerOptions() { IntroduceInstabilityByIgnoringProtectedModeSettings = true });
-
+        private static IWebDriver webDriver = new ChromeDriver();
         public static void Initialize()
-        {            
-            Goto(string.Empty);
+        {
+            Goto("");
         }
 
         public static string Title
